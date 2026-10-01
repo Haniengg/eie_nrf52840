@@ -1,0 +1,12 @@
+git status      - shows what's changed, staged (green) vs unstaged (red)
+git add <file>  - stages a file for the next commit
+git commit -m "msg" - saves a snapshot of staged changes
+git log         - shows commit history (press q to exit)
+git diff        - shows line-by-line changes not yet staged
+git branch      - lists branches; git branch <name> makes a new one
+git checkout <branch> - switches branch; -b creates + switches
+git fetch       - downloads remote changes without merging
+git pull        - fetch + merge into current branch
+git push        - uploads commits; first time: git push -u origin <branch>
+git merge <branch>  - combines another branch into this one
+git rebase <branch> - replays your commits on top of another branch
