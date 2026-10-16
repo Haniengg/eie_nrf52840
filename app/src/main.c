@@ -10,7 +10,7 @@
 #include "BTN.h"
 #include "LED.h"
 
-#define SLEEP_MS 1
+#define BLINK_MS 500
 
 int main(void) {
   if (0 > BTN_init()) {
@@ -20,8 +20,15 @@ int main(void) {
     return 0;
   }
 
+  printk("Hello from H\n");
+
   while (1) {
-    k_msleep(SLEEP_MS);
+    if (BTN_is_pressed(BTN0)) {
+      LED_set(LED1, LED_ON);
+    } else {
+      LED_set(LED1, LED_OFF);
+    }
+    k_msleep(10); // check the button 100 times a second
   }
   return 0;
 }
